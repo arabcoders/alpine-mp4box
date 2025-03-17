@@ -3,7 +3,7 @@ FROM alpine:latest AS builder
 ENV LANG=C.UTF-8
 ENV LC_ALL=C.UTF-8
 
-RUN apk add --update coreutils curl gcc g++ musl-dev libffi-dev openssl-dev make 
+RUN apk add --update git coreutils curl gcc g++ musl-dev libffi-dev openssl-dev make 
 
 WORKDIR /tmp
 RUN mkdir /gpac-master && curl -k -L https://github.com/gpac/gpac/archive/refs/tags/v2.4.0.zip -o /tmp/gpac.zip && \
