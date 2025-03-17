@@ -10,7 +10,7 @@ RUN mkdir /gpac-master && curl -k -L https://github.com/gpac/gpac/archive/refs/t
   unzip /tmp/gpac.zip && mv /tmp/gpac-*/* /gpac-master
 
 WORKDIR /gpac-master
-RUN ./configure --static-mp4box --use-zlib=no && make -j4
+RUN ./configure --static-bin --use-zlib=no && make -j4
 
 FROM alpine:latest
 
